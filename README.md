@@ -38,6 +38,7 @@
 
 ## GIỚI THIỆU ĐỀ TÀI
 * **Tên đề tài:** Phát hiện tiếp xúc gần
+* **Mô tả đề tài:** Hệ thống phát hiện tiếp xúc gần sử dụng dữ liệu từ các video (video có sẵn được triết xuất từ các camera,...) sau đó dữ liệu sẽ được cắt ra từng frame ảnh để phát hiện tiếp xúc gần thông qua việc xác định các đối tượng là người trong ảnh sau đó sẽ tính khoảng cách giữa các cặp người.
 
 ## CÀI ĐẶT
 
