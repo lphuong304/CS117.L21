@@ -17,7 +17,10 @@
 * [Giới thiệu môn học](#giới-thiệu-môn-học)
 * [Giới thiệu nhóm](#giới-thiệu-nhóm)
 * [Giới thiệu đề tài](#giới-thiệu-đề-tài)
-* [Cài đặt](#cài-dặt)
+* [Cài đặt](#cài-đặt)
+    - [Requirements](#requirements)
+    - [Installation](#installation)
+    - [Usage](#usage)
 
 ## GIỚI THIỆU MÔN HỌC
 * **Tên môn học:** TƯ DUY TÍNH TOÁN - COMPUTATIONAL THINKING
@@ -51,9 +54,14 @@ cd CS117.L21
 pip install -r requirements.txt
 ```
 
-##### Usage
+### Usage
+- Phát hiện video
 ```sh
 python main.py --input input/video.mp4
+```
+- Xuất output video
+```sh
 python output.py --input input/video.mp4 --output output/video.mp4
 ```
+
 
