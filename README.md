@@ -21,6 +21,8 @@
     - [Requirements](#requirements)
     - [Installation](#installation)
     - [Usage](#usage)
+* [Demo](#demo)
+* [Tài liệu tham khảo](#tài-liệu-tham-khảo)
 
 ## GIỚI THIỆU MÔN HỌC
 * **Tên môn học:** TƯ DUY TÍNH TOÁN - COMPUTATIONAL THINKING
@@ -41,9 +43,10 @@
 * **Mô tả đề tài:** Hệ thống phát hiện tiếp xúc gần sử dụng dữ liệu từ các video (video có sẵn được triết xuất từ các camera,...) sau đó dữ liệu sẽ được cắt ra từng frame ảnh để phát hiện tiếp xúc gần thông qua việc xác định các đối tượng là người trong ảnh sau đó sẽ tính khoảng cách giữa các cặp người.
 
 ## CÀI ĐẶT
+- Mô hình sử dụng pretrain model YoloV5 để phát hiện vật thể (người) [[1]](#tài-liệu-tham-khảo)
 
 ### Requirements
-- conda=.10.3
+- conda=4.10.3
 - python=3.8.8
 - torch==1.9.0
 - opencv-python=4.4.0
@@ -65,4 +68,7 @@ python main.py --input input/video.mp4
 python output.py --input input/video.mp4 --output output/video.mp4
 ```
 
+## DEMO
 
+## TÀI LIỆU THAM KHẢO
+- [[1] - YOLOv5 | PyTorch](https://pytorch.org/hub/ultralytics_yolov5/)
