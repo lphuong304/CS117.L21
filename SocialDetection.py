@@ -52,7 +52,7 @@ class SocialDetection:
                 if distance < self.threshold:
                     if boxes[u] not in danger: danger.append(boxes[u])
                     if boxes[v] not in danger: danger.append(boxes[v])
-                safe = list(set(boxes) - set(danger))
+        safe = list(set(boxes) - set(danger))
         return danger, safe       
     
     # Draw BoundingBox    
