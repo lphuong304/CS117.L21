@@ -22,8 +22,8 @@ class DetectAPI:
 
     # Check ImageSize
     def validImageSize(self, imageSize):
-        """480p"""
-        return imageSize >= 768 * 480
+        """360p"""
+        return imageSize >= 480 * 360 
 
     # Get BoundingBoxs
     def getBoundingBoxs(self, image):
