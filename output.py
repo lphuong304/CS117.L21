@@ -1,6 +1,6 @@
 # output.py
-# Usage 1: python output.py --type image --input Testcases/Street.JPG --output Results/Street.JPG
-# Usage 2: python output.py --type video --input Testcases/SampleV.mp4 --output Results/SampleV.avi
+# Usage 1: python output.py --type image --input Testcases/image_1.jpg --output Results/image_1.jpg
+# Usage 2: python output.py --type video --input Testcases/video_1.mp4 --output Results/video_1.avi
 # Authors: Nguyen Ngoc Lan Phuong <19520227@gm.uit.edu.vn>
 #          Cao Hung Phu           <19520214@gm.uit.edu.vn>
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
@@ -20,8 +20,8 @@ if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('--type', type=str, default='video')
-    parser.add_argument('--input', type=str, default='Testcases/SampleV.mp4')
-    parser.add_argument('--output', type=str, default='Results/SampleV.avi')
+    parser.add_argument('--input', type=str, default='Testcases/video_1.mp4')
+    parser.add_argument('--output', type=str, default='Results/video_1.avi')
 
     # Get arguments
     args = parser.parse_args()
@@ -33,8 +33,8 @@ if __name__ == '__main__':
     if detectType not in ['image', 'video']:
         print("Error type!!!")
         print("Type: image, video")
-        print("Example 1: python output.py --type image --input Testcases/Street.JPG --output Results/Street.JPG")
-        print("Example 2: python output.py --type video --input Testcases/SampleV.mp4 --output Results/SampleV.avi")
+        print("Example 1: python output.py --type image --input Testcases/image_1.jpg --output Results/image_1.jpg")
+        print("Example 2: python output.py --type video --input Testcases/video_1.mp4 --output Results/video_1.avi")
         exit()
 
     if not os.path.exists(imFilename):
