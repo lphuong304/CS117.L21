@@ -76,4 +76,8 @@ Full demo: https://www.youtube.com/watch?v=4AvWFB_quqs
 https://user-images.githubusercontent.com/63930670/131475574-32c75d09-e6b1-4f64-9b75-b786141db538.mp4
 
 ## TÀI LIỆU THAM KHẢO
-- [[1] - YOLOv5 | PyTorch](https://pytorch.org/hub/ultralytics_yolov5/)
+- [[1] - Social Distancing Detection with Deep Learning Model](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9243478)
+- [[2] - Perspective transformation](https://subscription.packtpub.com/book/web-development/9781838646301/6/ch06lvl1sec94/perspective-transformation)
+- [[3] - Real-time and Accurate UAV Pedestrian Detection for Social Distancing](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9417704)
+- [[4] - A Vision-based Social Distancing and Critical Density Detection System for COVID-19](https://arxiv.org/abs/2007.03578)
+- [[5] - YOLOv5 | PyTorch](https://pytorch.org/hub/ultralytics_yolov5/)
