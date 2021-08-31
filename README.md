@@ -35,7 +35,7 @@
 | STT | Họ tên | MSSV | Vai trò | Email | Github | Facebook |
 | :---: | --- | --- | --- | --- | --- | --- |
 | 1 | Nguyễn Ngọc Lan Phương | 19520227 | Nhóm trưởng | 19520227@gm.uit.edu.vn | [lphuong304](https://github.com/lphuong304) | [phuwowngnef](https://www.facebook.com/phuwowngnef) |
-| 1 | Cao Hưng Phú | 19520214 | Thành viên | 19520214@gm.uit.edu.vn | [caohungphu](https://github.com/caohungphu) | [caohungphuvn](https://www.facebook.com/caohungphuvn) |
+| 2 | Cao Hưng Phú | 19520214 | Thành viên | 19520214@gm.uit.edu.vn | [caohungphu](https://github.com/caohungphu) | [caohungphuvn](https://www.facebook.com/caohungphuvn) |
 | 3 | Lê Quang Nha | 19520195 | Thành viên | 19520195@gm.uit.edu.vn | [nhalq](https://github.com/nhalq) | [qnhane](https://www.facebook.com/qnhane) |
 
 ## GIỚI THIỆU ĐỀ TÀI
