@@ -1,5 +1,5 @@
 # output.py
-# Usage: python output.py --input input/video_1.mp4 --output output/video_1.avi
+# Usage: python output.py --input Testcases/SampleV.mp4 --output Results/SampleV.avi
 # Authors: Nguyen Ngoc Lan Phuong <19520227@gm.uit.edu.vn>
 #          Cao Hung Phu           <19520214@gm.uit.edu.vn>
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
@@ -16,8 +16,8 @@ THRESHOLD = 120
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input', type=str, default='input/video_1.mp4')
-    parser.add_argument('--output', type=str, default='output/video_1.avi')
+    parser.add_argument('--input', type=str, default='Testcases/SampleV.mp4')
+    parser.add_argument('--output', type=str, default='Results/SampleV.avi')
 
     # Detector
     detector = SocialDetection(THRESHOLD)
