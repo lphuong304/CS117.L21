@@ -6,7 +6,7 @@
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
 
 # %% Import library
-from detector import *
+from DetectAPI import *
 import argparse
 import os
 from tqdm import tqdm
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         exit()
 
     # Detector
-    detector = SocialDetection(THRESHOLD)
+    detector = DetectAPI(THRESHOLD)
 
     # Clear console
     os.system('cls')
