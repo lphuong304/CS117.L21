@@ -61,7 +61,7 @@ pip install -r requirements.txt
 ### Usage
 - Phát hiện image / video
 ```sh
-python detector.py --type image --input Testcases/Image.JPG
+python detector.py --type image --input Testcases/Street.JPG
 python detector.py --type video --input Testcases/SampleV.mp4
 ```
 - Xuất output image / video
