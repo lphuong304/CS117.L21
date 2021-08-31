@@ -1,5 +1,5 @@
 # output.py
-# Usage: python output.py --input input/video_1.mp4 --output output/video_1.mp4
+# Usage: python output.py --input input/video_1.mp4 --output output/video_1.avi
 # Authors: Nguyen Ngoc Lan Phuong <19520227@gm.uit.edu.vn>
 #          Cao Hung Phu           <19520214@gm.uit.edu.vn>
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
