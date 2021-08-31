@@ -1,6 +1,6 @@
-# detect.py
-# Usage 1: python detect.py --type image --input Testcases/Street.JPG
-# Usage 2: python detect.py --type video --input Testcases/SampleV.mp4
+# detector.py
+# Usage 1: python detector.py --type image --input Testcases/Street.JPG
+# Usage 2: python detector.py --type video --input Testcases/SampleV.mp4
 # Authors: Nguyen Ngoc Lan Phuong <19520227@gm.uit.edu.vn>
 #          Cao Hung Phu           <19520214@gm.uit.edu.vn>
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
@@ -33,8 +33,8 @@ if __name__ == '__main__':
     if detectType not in ['image', 'video']:
         print("Error type!!!")
         print("Type: image, video")
-        print("Example 1: python detect.py --type image --input Testcases/Street.JPG")
-        print("Example 2: python detect.py --type video --input Testcases/SampleV.mp4")
+        print("Example 1: python detector.py --type image --input Testcases/Street.JPG")
+        print("Example 2: python detector.py --type video --input Testcases/SampleV.mp4")
         exit()
 
     if not os.path.exists(imFilename):
