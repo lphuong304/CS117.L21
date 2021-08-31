@@ -71,7 +71,7 @@ python output.py --type video --input Testcases/video_1.mp4 --output Results/vid
 ```
 
 ## DEMO
-Full demo: https://www.youtube.com/watch?v=4AvWFB_quqs
+Full demo: https://www.youtube.com/playlist?list=PLuIgPZeWJ60_27EQfdfIsNqTEDtN2DMGj
 
 https://user-images.githubusercontent.com/63930670/131475574-32c75d09-e6b1-4f64-9b75-b786141db538.mp4
 
