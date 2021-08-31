@@ -46,10 +46,23 @@
 - Mô hình sử dụng pretrain model YoloV5 để phát hiện vật thể (người) [[1]](#tài-liệu-tham-khảo)
 
 ### Requirements
-- conda=4.10.3
-- python=3.8.8
-- torch==1.9.0
-- opencv-python=4.4.0
+* **Language:** Python 3
+* **Library:** 
+```sh
+matplotlib>=3.2.2
+numpy>=1.18.5
+opencv-python>=4.1.2
+Pillow>=8.0.0
+PyYAML>=5.3.1
+scipy>=1.4.1
+torch>=1.7.0
+torchvision>=0.8.1
+tqdm>=4.41.0
+seaborn>=0.11.0
+imutils
+pandas
+thop
+```
 
 ### Installation
 ```sh
