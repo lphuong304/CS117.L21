@@ -7,21 +7,24 @@
 import cv2
 import torch
 import math
+import torch.backends.cudnn as cudnn
 
 # %% Main SocialDetection
 class SocialDetection:
-    # Init Threshold + Model  
+    # Init Threshold + Model
     def __init__(self, threshold):
         self.threshold = threshold
         self.model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
         self.model.classes = [0] # Person
         self.model.conf    = 0.45
-    
+        if torch.cuda.is_available():
+            cudnn.benchmark = True
+
     # Check ImageSize
     def validImageSize(self, imageSize):
         """480p"""
-        return imageSize >= 768 * 480    
-        
+        return imageSize >= 768 * 480
+
     # Get BoundingBoxs
     def getBoundingBoxs(self, image):
         results = self.model(image).pandas().xyxy.pop()
@@ -29,7 +32,7 @@ class SocialDetection:
         (int(box['xmin']), int(box['ymin'])), # Top-left point
         (int(box['xmax']), int(box['ymax'])), # Bottom-right point
         ) for _, box in results.iterrows()]
-    
+
     # Get Centroids
     def getCentroids(self, boxes):
         centroids = []
@@ -38,7 +41,7 @@ class SocialDetection:
             y = (topLeft[1] + bottomRight[1]) / 2
             centroids.append((int(x), int(y)))
         return centroids
-    
+
     # Get Distance
     def getDistance(self, pointA, pointB):
         return math.sqrt((pointA[0] - pointB[0]) ** 2 + (pointA[1] - pointB[1]) ** 2)
@@ -53,18 +56,18 @@ class SocialDetection:
                     if boxes[u] not in danger: danger.append(boxes[u])
                     if boxes[v] not in danger: danger.append(boxes[v])
         safe = list(set(boxes) - set(danger))
-        return danger, safe       
-    
-    # Draw BoundingBox    
+        return danger, safe
+
+    # Draw BoundingBox
     def drawBoundingBox(self, image, boxes, color):
         for topLeft, bottomRight in boxes:
             cv2.rectangle(image, topLeft, bottomRight, color, 2, cv2.LINE_AA)
-        
+
     # Draw Centroid
     def drawCentroid(self, image, points):
         for point in points:
             cv2.circle(image, point, 3, (184, 162, 23), 2, cv2.LINE_AA)
-                 
+
     # Get Result
     def getResult(self, image):
         image = image.copy()
