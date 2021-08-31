@@ -1,21 +1,21 @@
-# detector.py
-# Usage 1: python detector.py --type image --input Testcases/Street.JPG
-# Usage 2: python detector.py --type video --input Testcases/SampleV.mp4
+# detect.py
+# Usage 1: python detect.py --type image --input Testcases/Street.JPG
+# Usage 2: python detect.py --type video --input Testcases/SampleV.mp4
 # Authors: Nguyen Ngoc Lan Phuong <19520227@gm.uit.edu.vn>
 #          Cao Hung Phu           <19520214@gm.uit.edu.vn>
 #          Le Quang Nha           <19520195@gm.uit.edu.vn>
 
-# %% Import library
-from SocialDetection import *
-import argparse
+# %% Import libraries
+from DetectAPI import *
 import os
+import argparse
 import imutils
 import ctypes
 
-# %% Config
-THRESHOLD = 120
+# %% Configurations
+THRESHOLD  = 120
 OUT_HEIGHT = 1280
-OUT_WIDTH = 720
+OUT_WIDTH  = 720
 
 # %% Main
 if __name__ == '__main__':
@@ -33,8 +33,8 @@ if __name__ == '__main__':
     if detectType not in ['image', 'video']:
         print("Error type!!!")
         print("Type: image, video")
-        print("Example 1: python detector.py --type image --input Testcases/Street.JPG")
-        print("Example 2: python detector.py --type video --input Testcases/SampleV.mp4")
+        print("Example 1: python detect.py --type image --input Testcases/Street.JPG")
+        print("Example 2: python detect.py --type video --input Testcases/SampleV.mp4")
         exit()
 
     if not os.path.exists(imFilename):
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         exit()
 
     # Detector
-    detector = SocialDetection(THRESHOLD)
+    detector = DetectAPI(THRESHOLD)
 
     # Clear console
     os.system('cls')
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
         # Print information
         print('=== CAPTURE INFORMATION ===')
-        print('Path input      : {}'.format(imFilename))
+        print('Input path      : {}'.format(imFilename))
         print('Frame size      : {} x {}'.format(frWidth, frHeight))
         print('Number of frame : {}'.format(frNumber))
         print('Frame per second: {}'.format(frPS))
@@ -74,7 +74,7 @@ if __name__ == '__main__':
             _, image = imReader.read()
             if not _: raise 'Oops! What a lovely bug: Fail to capture image'
             frame_show = imutils.resize(detector.getResult(image), height=OUT_HEIGHT, width=OUT_WIDTH)
-            cv2.imshow('CS117.L21 - Social Detection', frame_show)
+            cv2.imshow('CS117.L21 - Social Distancing Detection', frame_show)
             if cv2.waitKey(1) & 0xFF == 27:
                 break
         imReader.release()
@@ -82,10 +82,10 @@ if __name__ == '__main__':
 
     else:
         # Read input image
-        print('Path input      : {}'.format(imFilename))
+        print('Input path : {}'.format(imFilename))
         # Show output
         frame_show = imutils.resize(detector.getResult(cv2.imread(imFilename)), height=OUT_HEIGHT, width=OUT_WIDTH)
-        cv2.imshow('CS117.L21 - Social Detection', frame_show)
+        cv2.imshow('CS117.L21 - Social Distancing Detection', frame_show)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
 
